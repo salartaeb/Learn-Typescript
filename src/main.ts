@@ -1,2 +1,10 @@
-const a = '1';
-console.log('1adsada');
+// declaring variables
+const message: string = 'hi';
+
+// declaring functions 
+const getFullName = (first: string, last: string): string => {
+    return first + "" + last;
+};
+
+
+ // interfaces

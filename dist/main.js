@@ -1,2 +1,7 @@
-var a = '1';
-console.log('1adsada');
+// declaring variables
+var message = 'hi';
+// declaring functions 
+var getFullName = function (first, last) {
+    return first + "" + last;
+};
+// interfaces
