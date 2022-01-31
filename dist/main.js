@@ -18,3 +18,6 @@ var user2 = {
         return 'hello' + name;
     }
 };
+// Union operator 
+var a = '1';
+var car = null;

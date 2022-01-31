@@ -12,7 +12,6 @@ const getFullName = (first: string, last: string): string => {
 // by default all properties are mandatory
 // can make a property optional using a ? after the property
 // supports code completion
-
 interface UserInterface {
     name: string;
     age: number;
@@ -34,3 +33,13 @@ const user2: UserInterface = {
         return 'hello' + name;
     }
 }
+
+// Union operator 
+const a: string | null = '1'
+
+interface CarInterface  {
+    model: string;
+    wheels: number
+}
+
+const car: CarInterface | null = null;
