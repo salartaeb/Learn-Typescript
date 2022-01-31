@@ -4,4 +4,17 @@ var message = 'hi';
 var getFullName = function (first, last) {
     return first + "" + last;
 };
-// interfaces
+var user = {
+    name: 'sam',
+    age: 26,
+    getMessage: function () {
+        return 'hello' + name;
+    }
+};
+var user2 = {
+    name: 'bob',
+    age: 25,
+    getMessage: function () {
+        return 'hello' + name;
+    }
+};
