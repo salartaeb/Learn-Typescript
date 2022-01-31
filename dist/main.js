@@ -21,3 +21,4 @@ var user2 = {
 // Union operator 
 var a = '1';
 var car = null;
+var popularTages = ['coffee', 'music'];

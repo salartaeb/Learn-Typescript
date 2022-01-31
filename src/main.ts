@@ -43,3 +43,17 @@ interface CarInterface  {
 }
 
 const car: CarInterface | null = null;
+
+
+//type aliases
+type Species = string;
+
+interface animal {
+    species: Species
+    name: string
+    color: string
+}
+
+type PopularTag = string;
+
+const popularTages: PopularTag[] = ['coffee', 'music'];
