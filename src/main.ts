@@ -81,9 +81,93 @@
 // let s1: string = vAny;
 // let s2: string = vUnkown as string;
 
-const someElement = document.querySelector('.foo');
+// const someElement = document.querySelector('.foo');
 
-someElement.addEventListener('blur', (event) => {
-    const target = event.target as HTMLInputElement;
-    console.log('event', target.value);
- });
+// someElement.addEventListener('blur', (event) => {
+//     const target = event.target as HTMLInputElement;
+//     console.log('event', target.value);
+//  });
+ 
+
+//classes
+// interface UserInterface {
+//     getFullName();
+// }
+// class User implements UserInterface {
+//     //can make properties private - properties are public by default
+//     private firstName: string
+//     private lastName: String
+//     readonly unchangeableName: string
+    
+//     constructor(firstName: string, lastName: string) {
+//         this.firstName = firstName;
+//         this.lastName = lastName
+//     }
+
+//     getFullName(): string {
+//         return this.firstName + "" + this.lastName;
+//     }
+// }
+
+// const user = new User('monster', 'lessons');
+// user.getFullName();
+
+// class Admin extends User {
+
+// }
+
+
+const addId = <T extends object> (obj: T) => {
+    const id = Math.random().toString(16);
+    return {
+        ...obj,
+        id
+    }
+}
+
+//generic interface
+interface UserInterface<T, V> {
+    name: string; 
+    data: T;
+    meta: V
+}
+
+const user: UserInterface<{ meta: string }, string> = {
+    name: 'Jack',
+    data: {
+        meta: 'foo'
+    },
+    meta: 'bar',
+}
+
+const user2: UserInterface<string[], object> = {
+    name: 'bob',
+    data: ['age', 'email'],
+    meta: {
+
+    }
+}
+
+//explicit declarations are easier to read
+
+//Enums
+// const status = {
+//     notStarted: 0,
+//     inProgress: 1,
+//     done: 2,
+// }
+
+enum StatusEnum {
+    NotStarted = 'notStated',
+    InProgress = 'inProgress',
+    Done = 'Done'
+}
+
+interface Task {
+    id: string,
+    status: StatusEnum,
+}
+
+let nonStartedStatus: StatusEnum = StatusEnum.NotStarted;
+nonStartedStatus = StatusEnum.Done;
+console.log(StatusEnum.InProgress)
